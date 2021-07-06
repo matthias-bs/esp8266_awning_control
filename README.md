@@ -12,3 +12,30 @@
 see figure below
 
 ![Awning Control Setup](awning_control_setup-en.png)
+
+### Dashboard with [IoT MQTT Panel](https://snrlab.in/iot/iot-mqtt-panel-user-guide)
+![awning_control_panel-de+en](https://user-images.githubusercontent.com/83612361/124654778-4395f700-de9f-11eb-89f1-63ba9eb8cf68.png)
+
+**MQTT Interface**
+```
+MQTT subscriptions:
+     <base_topic>/in           (-)
+     <base_topic>/out          ([seconds])
+     <base_topic>/stop         (-)
+     <base_topic>/auto_report_ctrl         (0|1)
+     <base_topic>/auto_irr_ctrl            (0|1)
+
+MQTT publications:
+     <base_topic>/status       ("online"|"dead"$)
+     <base_topic>/last_cmd     ('>' | ']' | '}' | ')' | '<' | '[')*
+
+$ via LWT
+
+*) Last Command Tokens
+    > - moving out
+    ] - moved  out
+    } - moving partially out
+    ) - moved  partially out
+    < - moving in
+    [ - moved  out
+```
