@@ -15,6 +15,10 @@ see figure below
 
 ![Awning Control Setup](awning_control_setup-en.png)
 
+(https://www.123rf.com/photo_52895758_stock-vector-sign-yellow-awning.html - 
+Copyright: [maudis60](https://www.123rf.com/profile_maudis60) / all other images: creative commons/public domain)
+
+
 ### Hardware
 
 **Schematic**
