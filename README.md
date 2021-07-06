@@ -22,8 +22,6 @@ MQTT subscriptions:
      <base_topic>/in           (-)
      <base_topic>/out          ([seconds])
      <base_topic>/stop         (-)
-     <base_topic>/auto_report_ctrl         (0|1)
-     <base_topic>/auto_irr_ctrl            (0|1)
 
 MQTT publications:
      <base_topic>/status       ("online"|"dead"$)
