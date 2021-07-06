@@ -1,4 +1,14 @@
 # esp8266_awning_control
-ESP8266 (secure) MQTT to 433 MHz RF Remote Control for Awning
+## ESP8266 (secure) MQTT to ISM Band (e.g. 433 MHz) Awning Remote Control
 
 (using Arduino IDE)
+
+### System Setup
+- The awning is normally controlled via a handheld 433 MHz (or other [ISM radio band](https://en.wikipedia.org/wiki/ISM_radio_band) depending on where you live) remote control
+- The ESP8266 with **awning_control** sketch provides secure MQTT access via WiFi and converts MQTT messages into radio control sequences
+- An MQTT client, such as a smart phone or tablet with [IoT MQTT Panel](https://snrlab.in/iot/iot-mqtt-panel-user-guide) app, can communicate with awning_control from a remote location
+- An MQTT broker (such as a [Raspberry Pi](https://www.raspberrypi.org/) with [Mosquitto](https://mosquitto.org/)) passes control and status messages between the two clients
+
+see figure below
+
+![Awning Control Setup](awning_control_setup-en.png)
