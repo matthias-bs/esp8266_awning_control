@@ -29,7 +29,7 @@ Copyright: [maudis60](https://www.123rf.com/profile_maudis60) / all other images
 
 ![Perfboard](hw/awning_control_perfboard_v1.0.png)
 
-The circuit is powered from the ESP8266 DevKit Micro-USB socket.
+The circuit is powered from the ESP8266 DevKit Micro-USB socket (~70mA @5V).
 
 *__Note:__* Transmitter FS1000a: 3...12V / Receiver YK-MK-5V:   5V
 
