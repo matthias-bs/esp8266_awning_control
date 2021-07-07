@@ -49,32 +49,65 @@ The circuit is powered from the ESP8266 DevKit Micro-USB socket (~70mA @5V).
 
 **Bill of Materials**
 
-    | Pos. | Part / Source                                                                            | Description                          |
-    |------|------------------------------------------------------------------------------------------|--------------------------------------|
-    |    1 | DEBO JT ESP8266 - NodeMCU ESP8266 WiFi-Modul                                             | ESP8266 module / NodeMCU             |
-    |      | https://www.reichelt.de/nodemcu-esp8266-wifi-modul-debo-jt-esp8266-p219900.html          |                                      |
-    | ---- | ---------------------------------------------------------------------------------------- | -------------------------------------|
-    |    2 | DEBO 433 RX/TX - Entwicklerboards - 433 MHz RX/TX Modul                                  | 433 MHz Receiver / Transmitter       |
-    |      | https://www.reichelt.de/entwicklerboards-433-mhz-rx-tx-modul-debo-433-rx-tx-p224219.html | Modules                              |
-    |      | - or -                                                                                   | Receiver:    YK-MK-5V                |
-    |      | kwmobile 3X 433 MHz Sender Empfänger Funk Modul für Arduino und Raspberry Pi -           | Transmitter: FS1000A                 |
-    |      | Wireless Transmitter Module                                                              |                                      |
-    |      | https://smile.amazon.de/gp/product/B01H2D2RH6 (3 pcs per unit)                           |                                      |
-    | ---- | ---------------------------------------------------------------------------------------- | ------------------------------------ |
-    |    3 | 433MHz Antenne Helical-Antenne Fernbedienung für Arduino Raspberry Pi                    | Antenna                              |
-    |      | https://smile.amazon.de/gp/product/B00SO651VU (10 pcs per unit)                          | (a piece of wire might work as well) |
-    | ---- | ---------------------------------------------------------------------------------------- | ------------------------------------ |
-    |    4 | Piece of Breadboard                                                                      |                                      |
-    | ---- | ---------------------------------------------------------------------------------------- | ------------------------------------ |
-    |    5 | 3x1 Socket Header (2 pcs)                                                                |                                      |
-    | ---- | ---------------------------------------------------------------------------------------- | ------------------------------------ |
-    |    6 | Micro-USB to USB-A Cable                                                                 |                                      |
-    | ---- | ---------------------------------------------------------------------------------------- | ------------------------------------ |
-    |    7 | Case                                                                                     |                                      |
-    | ---- | ---------------------------------------------------------------------------------------- | ------------------------------------ |
-    |    8 | USB Power Supply                                                                         |                                      |
-    | ---- | ---------------------------------------------------------------------------------------- | ------------------------------------ |
-
+<table>
+<tr>
+    <th> Pos.
+    <th> Part / Source
+    <th> Description
+</tr>
+<tr>
+    <td> 1
+    <td> DEBO JT ESP8266 - NodeMCU ESP8266 WiFi-Modul<br>
+    https://www.reichelt.de/nodemcu-esp8266-wifi-modul-debo-jt-esp8266-p219900.html
+    <td> ESP8266 module / NodeMCU
+</tr>
+<tr>
+    <td> 2
+    <td> DEBO 433 RX/TX - Entwicklerboards - 433 MHz RX/TX Modul<br>
+         https://www.reichelt.de/entwicklerboards-433-mhz-rx-tx-modul-debo-433-rx-tx-p224219.html<br>
+         - or -<br>
+         kwmobile 3X 433 MHz Sender Empfänger Funk Modul für Arduino und Raspberry Pi -<br>
+         Wireless Transmitter Module<br>
+         https://smile.amazon.de/gp/product/B01H2D2RH6<br>
+         (3 pcs per unit)
+    <td> 433 MHz Receiver / Transmitter Modules<br>
+         Receiver: YK-MK-5V<br>
+         Transmitter: FS1000A
+</tr>
+<tr>
+    <td> 3
+    <td> 433MHz Antenne Helical-Antenne Fernbedienung für Arduino Raspberry Pi<br>
+        https://smile.amazon.de/gp/product/B00SO651VU<br>
+        (10 pcs per unit)
+    <td> Antenna<br>
+        (a piece of wire might work as well)
+</tr>
+<tr>
+    <td> 4
+    <td> Piece of Breadboard
+</tr>
+<tr>
+    <td> 5
+    <td> 3x1 Socket Header (2 pcs)
+    <td>
+</tr>
+<tr>
+    <td> 6
+    <td> Micro-USB to USB-A Cable
+    <td>
+</tr>
+<tr>
+    <td> 7
+    <td> Case
+    <td>
+</tr>
+<tr>
+    <td> 8
+    <td> USB Power Supply
+    <td>
+</tr>
+</table>
+    
 
 ### Dashboard with [IoT MQTT Panel](https://snrlab.in/iot/iot-mqtt-panel-user-guide)
 ![awning_control_panel-de+en](https://user-images.githubusercontent.com/83612361/124654778-4395f700-de9f-11eb-89f1-63ba9eb8cf68.png)
