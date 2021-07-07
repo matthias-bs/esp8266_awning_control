@@ -10,6 +10,7 @@
 - An MQTT broker (such as a [Raspberry Pi](https://www.raspberrypi.org/) with [Mosquitto](https://mosquitto.org/)) passes control and status messages between the two clients
 - **Your awning specific radio remote control sequences must initially be received and recorded as described in [thexperiments /
 esp8266_RFControl](https://github.com/thexperiments/esp8266_RFControl)!!!**
+- **The transmit algorithm suports only fixed (i.e. non-rolling) codes! This means the remote control must always send the same sequence per command.**
 
 see figure below
 
@@ -130,9 +131,9 @@ The circuit is powered from the ESP8266 DevKit Micro-USB socket (~70mA @5V).
 
     *__Note 2:__* The ESP8266 GPIO pins are **not** 5V-compatible! **Make sure the input voltage from the receiver is limited to 3.3V!** 
    
-2. Record your remote control sequences as described in [thexperiments / esp8266_RFControl](https://github.com/thexperiments/esp8266_RFControl)
+2. Record your remote control sequences as described in [thexperiments / esp8266_RFControl](https://github.com/thexperiments/esp8266_RFControl).
 
-3. Modify the variables `buckets`, `timings_up`, `timings_stop` and `timings_down` accordingly.
+3. Modify the variables `buckets`, `timings_up`, `timings_stop` and `timings_down` in [awning_control.ino](src/awning_control.ino) accordingly.
    
    `buckets[8]` is an array of pulse and pause lengths in microseconds occurring in a sequence. A pulse is simply the transmission on the ISM radio band carrier frequency (e.g. 433 MHz).
    
@@ -151,7 +152,7 @@ The circuit is powered from the ESP8266 DevKit Micro-USB socket (~70mA @5V).
    
    etc.
    
-4. If one command is working and others not
+4. If one command is working and others are not...
    
    Try to compare the sequences. The `buckets` values should be more or less identical. Are the `timings` different in length? Do you see some striking similarities in the sequences? In my case, the receive algorithm missed the first pulse of the `STOP` sequence. Shifting the array by one position revealed the mainly identical sequences; after adding the first pulse length from the `up` or `down` sequences, the `STOP` command worked fine. 
    
