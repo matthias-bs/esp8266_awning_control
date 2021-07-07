@@ -118,8 +118,17 @@ The circuit is powered from the ESP8266 DevKit Micro-USB socket (~70mA @5V).
     <td>
 </tr>
 </table>
-    
+   
+   
+### Software Configuration
+   
+**RF Control Sequence**
+   
+**WiFi, MQTT and Security**
 
+Set up your configuration in a file `secrets.h` which will be included in `awning_control.ino` (preferred) or edit the file `awning_control.ino` directly (not recommended). Please refer to [ESP_MQTT_Secure](https://github.com/debsahu/ESP_MQTT_Secure) for details.
+
+   
 ### Dashboard with [IoT MQTT Panel](https://snrlab.in/iot/iot-mqtt-panel-user-guide)
 ![awning_control_panel-de+en](https://user-images.githubusercontent.com/83612361/124654778-4395f700-de9f-11eb-89f1-63ba9eb8cf68.png)
 
