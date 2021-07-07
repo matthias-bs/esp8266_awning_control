@@ -11,6 +11,7 @@
 - **Your awning specific radio remote control sequences must initially be received and recorded as described in [thexperiments /
 esp8266_RFControl](https://github.com/thexperiments/esp8266_RFControl)!!!**
 - **The transmit algorithm suports only fixed (i.e. non-rolling) codes! This means the remote control must always send the same sequence per command.**
+- **Please note: There is no feedback from the awning to _awning_control_!**
 
 see figure below
 
