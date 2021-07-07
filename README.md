@@ -25,9 +25,22 @@ Copyright: [maudis60](https://www.123rf.com/profile_maudis60) / all other images
 
 ![Schematic](hw/awning_control_schematic_v1.0.png)
 
+
 **ESP8266 NodeMCU, Breadboard, RF Transmitter Module and Antenna**
 
 ![Perfboard](hw/awning_control_perfboard_v1.0.png)
+
+
+**Fritzing Parts**
+
+<table>
+<tr><td>NodeMCU-v1.0              <td>https://github.com/squix78/esp8266-fritzing-parts/blob/master/nodemcu-v1.0/NodeMCUV1.0.fzpz
+<tr><td>FS1000A 433MHz Transmitter<td>https://github.com/AchimPieters/Fritzing-Custom-Parts/releases/tag/0.0.1
+<tr><td>Antenna                   <td>https://forum.fritzing.org/t/hc-12-module-433mhz-long-range-1-8km/1976
+</table>
+
+    
+**Power Supply**
 
 The circuit is powered from the ESP8266 DevKit Micro-USB socket (~70mA @5V).
 
