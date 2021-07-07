@@ -158,6 +158,10 @@ $ via LWT
 3. RFControl
          
    https://github.com/pimatic/RFControl
+        
+4. "Raspberry Pi LAN" by Dirk Koudstaal 
+   
+   https://commons.wikimedia.org/wiki/File:Raspberry_Pi_LAN.svg
          
 ## Disclaimer and Legal
 
