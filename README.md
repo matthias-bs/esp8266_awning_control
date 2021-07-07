@@ -133,3 +133,9 @@ $ via LWT
     < - moving in
     [ - moved  out
 ```
+
+## Disclaimer and Legal
+
+> This project is a community project not for commercial use.
+> The authors will not be held responsible in the event of device failure or damages/injuries due to moving objects without any visual feedback.
+> Please think twice about any possible harmful consequences!
