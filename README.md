@@ -123,6 +123,37 @@ The circuit is powered from the ESP8266 DevKit Micro-USB socket (~70mA @5V).
 ### Software Configuration
    
 **RF Control Sequence**
+
+1. Connect the RF Receiver (YK-MK-5V) to the ESP8266 NodeMCU.
+
+    *__Note 1:__* YK-MK-5V needs a 5V power supply!
+
+    *__Note 2:__* The ESP8266 GPIO pins are **not** 5V-compatible! **Make sure the input voltage from the receiver is limited to 3.3V!** 
+   
+2. Record your remote control sequences as described in [thexperiments / esp8266_RFControl](https://github.com/thexperiments/esp8266_RFControl)
+
+3. Modify the variables `buckets`, `timings_up`, `timings_stop` and `timings_down` accordingly.
+   
+   `buckets[8]` is an array of pulse and pause lengths in microseconds occurring in a sequence. A pulse is simply the transmission on the ISM radio band carrier frequency (e.g. 433 MHz).
+   
+   `timings_<up|stop|down>[]` contains indices into `buckets[]`, i.e. it points to the pulse/pause lengths in an alternating fashion.
+   
+   Example:
+   ```
+   unsigned long buckets[8] = {344,720,1536,4748,7734,0,0,0};
+   char timings_up[] = "3210...";
+   ```
+   This means:
+   1. send a pulse of length #3 (4748µs)
+   2. make a pause of length #2 (1536µs)
+   3. send a pulse of length #1 (720µs)
+   4. make a pause of length #0 (344µs)
+   
+   etc.
+   
+4. If one command is working and others not
+   
+   Try to compare the sequences. The `buckets` values should be more or less identical. Are the `timings` different in length? Do you see some striking similarities in the sequences? In my case, the receive algorithm missed the first pulse of the `STOP` sequence. Shifting the array by one position revealed the mainly identical sequences; after adding the first pulse length from the `up` or `down` sequences, the `STOP` command worked fine. 
    
 **WiFi, MQTT and Security**
 
