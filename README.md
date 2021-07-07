@@ -15,8 +15,19 @@ see figure below
 
 ![Awning Control Setup](awning_control_setup-en.png)
 
-(https://www.123rf.com/photo_52895758_stock-vector-sign-yellow-awning.html - 
-Copyright: [maudis60](https://www.123rf.com/profile_maudis60) / all other images: creative commons/public domain)
+Copyright Notice:
+
+* https://www.123rf.com/photo_52895758_stock-vector-sign-yellow-awning.html 
+
+   Copyright: [maudis60](https://www.123rf.com/profile_maudis60)
+
+* https://commons.wikimedia.org/wiki/File:Nodemcu_amica_bot_02.png
+
+   Copyright: [Make Magazin DE](https://commons.wikimedia.org/wiki/User:MakeMagazinDE) 
+
+* all other images: 
+
+   creative commons/public domain
 
 
 ### Hardware
@@ -133,7 +144,21 @@ $ via LWT
     < - moving in
     [ - moved  out
 ```
+                                                            
+### References and Acknowledgements
 
+1. ESP_MQTT_Secure
+
+    https://github.com/debsahu/ESP_MQTT_Secure
+
+2. esp8266_RFControl
+         
+    https://github.com/thexperiments/esp8266_RFControl
+         
+3. RFControl
+         
+   https://github.com/pimatic/RFControl
+         
 ## Disclaimer and Legal
 
 > This project is a community project not for commercial use.
