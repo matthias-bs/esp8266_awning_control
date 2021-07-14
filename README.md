@@ -169,6 +169,35 @@ Set up your configuration in a file `secrets.h` which will be included in `awnin
 ### Dashboard with [IoT MQTT Panel](https://snrlab.in/iot/iot-mqtt-panel-user-guide)
 ![awning_control_panel-de+en](https://user-images.githubusercontent.com/83612361/124654778-4395f700-de9f-11eb-89f1-63ba9eb8cf68.png)
 
+
+
+
+**Install _IoT MQTT Panel_ on your Android device**
+  
+  see [IoT MQTT Panel](https://snrlab.in/iot/iot-mqtt-panel-user-guide)
+
+
+**Set up *IoT MQTT Panel* from configuration file**
+
+You can either edit the provided [JSON configuration file](IoTMQTTPanel_Awning_Control.json) before importing it or import it as-is and make the required changes in *IoT MQTT Panel*. Don't forget to add the broker's certificate if using Secure MQTT! (in the App: *Connections -> Edit Connections: Certificate path*.)
+   
+   
+**Editing [IoTMQTTPanel_Awning_Control.json](IoTMQTTPanel_Awning_Control.json)**
+
+At the beginning, replace the dummy IP address *123.345.678* and port *8883* by your MQTT broker's IP address/hostname and port, change *Your_Client_ID* and *Your_MQTT_Connection* as needed:
+```
+[...]
+"connections":[{"autoConnect":true,"host":"123.345.678","port":8883,"clientId":"Your_Client_ID","connectionName":"Your_MQTT_Connection"
+[...]
+```
+
+At the end, change *Your_Username* and *Your_Password* as needed:
+```
+[...]
+"username":"Your_Username","password":"Your_Password"
+[...]
+```
+
 **MQTT Interface**
 ```
 MQTT subscriptions:
