@@ -59,10 +59,10 @@ jobs:
         if: ${{ env.run-build == 'true' }}
         run:
           |
-          declare -a required_libs=(
-            "RFControl.git"
-            "MQTT@2.5.0"
-          )
+          ps -p "$$"
+          gh repo clone pimatic/RFControl
+          arduino-cli lib install MQTT@2.5.0
+          ls
           
       - name: Install platform
         if: ${{ env.run-build == 'true' }}
