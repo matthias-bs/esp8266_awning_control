@@ -67,7 +67,7 @@ const char sketch_id[] = "awning_control 20210628";
 
 #include "secrets.h"
 
-#ifndef SECRET
+#ifndef SECRETS
     const char ssid[] = "WiFiSSID";
     const char pass[] = "WiFiPassword";
 
