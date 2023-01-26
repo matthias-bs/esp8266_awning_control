@@ -60,7 +60,7 @@ jobs:
         run:
           |
           declare -a required_libs=(
-            "https://github.com/pimatic/RFControl.git"
+            "RFControl.git"
             "MQTT@2.5.0"
           )
           
