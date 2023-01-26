@@ -49,7 +49,7 @@ jobs:
           # platform-dependent settings - extra board options, board index URLs, skip patterns etc.
           if [[ "${{ contains(matrix.board, 'esp8266:esp8266') }}" == "true" ]]; then
             # ESP8266
-            echo "options=,xtal=80,ResetMethod=ck,CrystalFreq=26,FlashFreq=40,FlashMode=qio,eesz=512K" >> $GITHUB_OUTPUT
+            echo "options=:xtal=80,ResetMethod=ck,CrystalFreq=26,FlashFreq=40,FlashMode=qio,eesz=512K" >> $GITHUB_OUTPUT
             echo "index-url=--additional-urls http://arduino.esp8266.com/stable/package_esp8266com_index.json" >> $GITHUB_OUTPUT
             #echo "skip-pattern=(HTTP|MQTT).*ino" >> $GITHUB_OUTPUT
 
