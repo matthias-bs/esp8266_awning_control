@@ -1,0 +1,22 @@
+{
+  "name": "esp8266_awning_control",
+  "version": "1.0",
+  "description": "ESP8266 (secure) MQTT to 433 MHz RF Remote Control for Awning",
+  "main": "esp8266_awning_control.ino",
+  "frameworks": "arduino",
+  "platforms": "ESP8266",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthias-bs/esp8266_awning_control.git"
+  },
+  "author": "Matthias Prinke",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/matthias-bs/esp8266_awning_control/issues"
+  },
+  "homepage": "https://github.com/matthias-bs/esp8266_awning_control#README",
+  "dependencies": {
+    "RFControl": "pimatic/RFControl",
+    "arduino-mqtt": "256dpi/arduino-mqtt#semver:^2.5.0"
+  }
+}
