@@ -61,9 +61,10 @@ jobs:
         run:
           |
           ps -p "$$"
+          arduino-cli lib install MQTT@2.5.0
           gh repo clone pimatic/RFControl
           cp -r RFControl /home/runner/Arduino/libraries/
-          arduino-cli lib install MQTT@2.5.0
+          pwd
           ls
           ls /home/runner/Arduino/libraries
           
