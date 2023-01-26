@@ -62,8 +62,11 @@ jobs:
           |
           ps -p "$$"
           gh repo clone pimatic/RFControl
+          cp -r /home/runner/work/RFControl \
+             /home/runner/Arduino/libraries/
           arduino-cli lib install MQTT@2.5.0
           ls
+          ls /home/runner/Arduino/libraries
           
       - name: Install platform
         if: ${{ env.run-build == 'true' }}
