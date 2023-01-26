@@ -1,4 +1,9 @@
 # esp8266_awning_control
+
+[![CI](https://github.com/matthias-bs/esp8266_awning_control/actions/workflows/CI.yml/badge.svg)](https://github.com/matthias-bs/esp8266_awning_control/actions/workflows/CI.yml)
+[![GitHub release](https://img.shields.io/github/release/matthias-bs/esp8266_awning_control?maxAge=3600)](https://github.com/matthias-bs/esp8266_awning_control/releases)
+[![License: MIT](https://img.shields.io/badge/license-GPLv3-green)](https://github.com/matthias-bs/esp8266_awning_control/blob/main/LICENSE)
+
 ## ESP8266 (secure) MQTT to ISM Radio Band Awning Remote Control
 
 (using Arduino IDE)
