@@ -163,7 +163,7 @@ Set up your configuration in a file `secrets.h` which will be included in `awnin
    
 **Arduino IDE Config**
 
-![Arduino IDE Config](src/arduino_cfg-awning_control.png)
+![Arduino IDE Config](https://user-images.githubusercontent.com/83612361/214785475-e2e2516b-c845-4e01-8300-1e8c806bd3a3.png)
 
    
 ### Dashboard with [IoT MQTT Panel](https://snrlab.in/iot/iot-mqtt-panel-user-guide)
