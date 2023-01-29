@@ -69,6 +69,7 @@ const char sketch_id[] = "awning_control_ 20230129";
 ////--------------------------////
 
 #include "secrets.h"
+#ifndef SECRETS
     #define HOSTNAME "awning_control"
     const char *AP_PASS  = "your-ap-passwd";
 
