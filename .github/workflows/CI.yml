@@ -14,6 +14,7 @@ jobs:
       matrix:
         board:
           - esp8266:esp8266:generic
+          - esp8266:esp8266:d1_mini
 
     runs-on: ubuntu-latest
     name: ${{ matrix.board }}
