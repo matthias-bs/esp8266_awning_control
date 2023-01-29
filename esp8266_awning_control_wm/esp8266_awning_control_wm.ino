@@ -69,12 +69,8 @@ const char sketch_id[] = "awning_control_ 20230129";
 ////--------------------------////
 
 #include "secrets.h"
-
-#ifndef SECRETS
-    const char ssid[] = "WiFiSSID";
-    const char pass[] = "WiFiPassword";
-
     #define HOSTNAME "awning_control"
+    const char *AP_PASS  = "your-ap-passwd";
 
     const char MQTT_HOST[] = "xxx.yyy.zzz.com";
     const int MQTT_PORT = 8883;
