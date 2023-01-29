@@ -51,8 +51,8 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 
-#include <ESP8266WiFi.h>      // .arduino15/packages/esp8266/hardware/esp8266/3.0.1/libraries/ESP8266WiFi
-#include <WiFiClientSecure.h> // .arduino15/packages/esp8266/hardware/esp8266/3.0.1/libraries/ESP8266WiFi
+#include <ESP8266WiFi.h>      // .arduino15/packages/esp8266/hardware/esp8266/3.1.x/libraries/ESP8266WiFi
+#include <WiFiClientSecure.h> // .arduino15/packages/esp8266/hardware/esp8266/3.1.x/libraries/ESP8266WiFi
 #include <MQTT.h>             // https://github.com/256dpi/arduino-mqtt
 #include <RFControl.h>        // https://github.com/pimatic/RFControl
 #include <time.h>
@@ -77,6 +77,9 @@ const char sketch_id[] = "awning_control 20210628";
     const int MQTT_PORT = 8883;
     const char MQTT_USER[] = ""; // leave blank if no credentials used
     const char MQTT_PASS[] = ""; // leave blank if no credentials used
+
+    // see https://github.com/esp8266/Arduino/tree/master/libraries/ESP8266WiFi/examples/BearSSL_Validation
+    // cert.py -s <your_broker>:<port> -n SSL
 
     #ifdef CHECK_CA_ROOT
     static const char digicert[] PROGMEM = R"EOF(
