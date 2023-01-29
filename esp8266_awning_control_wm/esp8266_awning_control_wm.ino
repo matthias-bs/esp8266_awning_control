@@ -51,8 +51,8 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 
-#include <ESP8266WiFi.h>      // .arduino15/packages/esp8266/hardware/esp8266/3.0.x/libraries/ESP8266WiFi
-#include <WiFiClientSecure.h> // .arduino15/packages/esp8266/hardware/esp8266/3.0.x/libraries/ESP8266WiFi
+#include <ESP8266WiFi.h>      // .arduino15/packages/esp8266/hardware/esp8266/3.1.x/libraries/ESP8266WiFi
+#include <WiFiClientSecure.h> // .arduino15/packages/esp8266/hardware/esp8266/3.1.x/libraries/ESP8266WiFi
 #include <WiFiManager.h>      // https://github.com/tzapu/WiFiManager
 #include <MQTT.h>             // https://github.com/256dpi/arduino-mqtt
 #include <RFControl.h>        // https://github.com/pimatic/RFControl
