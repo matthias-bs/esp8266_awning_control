@@ -78,6 +78,8 @@ const char sketch_id[] = "awning_control_ 20230129";
     const char MQTT_USER[] = ""; // leave blank if no credentials used
     const char MQTT_PASS[] = ""; // leave blank if no credentials used
 
+    // see https://github.com/esp8266/Arduino/tree/master/libraries/ESP8266WiFi/examples/BearSSL_Validation
+    // cert.py -s <your_broker>:<port> -n SSL
     #ifdef CHECK_CA_ROOT
     static const char digicert[] PROGMEM = R"EOF(
     -----BEGIN CERTIFICATE-----
