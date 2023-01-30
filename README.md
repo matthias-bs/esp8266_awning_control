@@ -76,8 +76,10 @@ The circuit is powered from the ESP8266 DevKit Micro-USB socket (~70mA @5V).
 <tr>
     <td> 1
     <td> DEBO JT ESP8266 - NodeMCU ESP8266 WiFi-Modul<br>
-    https://www.reichelt.de/nodemcu-esp8266-wifi-modul-debo-jt-esp8266-p219900.html
-    <td> ESP8266 module / NodeMCU
+    https://www.reichelt.de/nodemcu-esp8266-wifi-modul-debo-jt-esp8266-p219900.html<br>
+    - or -<br>
+    ESP8266 D1 mini
+    <td> ESP8266 module
 </tr>
 <tr>
     <td> 2
