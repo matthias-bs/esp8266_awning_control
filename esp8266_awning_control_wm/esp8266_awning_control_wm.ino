@@ -27,7 +27,7 @@
 // < - moving in
 // [ - moved  out
 //
-// created: 06/2021 updated: 06/2021
+// created: 06/2021
 //
 // This program is Copyright (C) 06/2021 Matthias Prinke
 // <m.prinke@arcor.de> and covered by GNU's GPL.
