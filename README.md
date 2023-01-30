@@ -164,7 +164,7 @@ The circuit is powered from the ESP8266 DevKit Micro-USB socket (~70mA @5V).
    
 **WiFi, MQTT and Security**
 
-Set up your configuration in a file `secrets.h` which will be included in `awning_control.ino` (preferred) or edit the file `awning_control.ino` directly (not recommended). Please refer to [ESP_MQTT_Secure](https://github.com/debsahu/ESP_MQTT_Secure) for details.
+Set up your configuration in a file [secrets.h](https://github.com/matthias-bs/esp8266_awning_control/blob/main/secrets.h) which will be included in [esp8266_awning_control.ino](https://github.com/matthias-bs/esp8266_awning_control/blob/main/esp8266_awning_control.ino) (preferred) or edit the file `awning_control.ino` directly (not recommended). Please refer to [ESP_MQTT_Secure](https://github.com/debsahu/ESP_MQTT_Secure) for details.
    
 **Arduino IDE Config**
 
