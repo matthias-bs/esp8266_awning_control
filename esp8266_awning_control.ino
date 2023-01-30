@@ -278,7 +278,7 @@ void setup()
     Serial.print("Setting time using SNTP ");
     configTime(-5 * 3600, 0, "pool.ntp.org", "time.nist.gov");
     now = time(nullptr);
-    int count = 0;
+    count = 0;
     while (now < 1510592825)
     {
         delay(500);
