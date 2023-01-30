@@ -39,7 +39,8 @@
 // 20210628 Created
 // 20210629 Fixed handling of <stop> command while previous command is still
 //          executed
-//          Fixed RF Control sequence for <stop> command 
+//          Fixed RF Control sequence for <stop> command
+// 20230130 Improved robustness
 //
 // ToDo:
 // 
@@ -57,7 +58,7 @@
 #include <RFControl.h>        // https://github.com/pimatic/RFControl
 #include <time.h>
 
-const char sketch_id[] = "awning_control 20210628";
+const char sketch_id[] = "awning_control 20230130";
 
 //enable only one of these below, disabling both is fine too.
 // #define CHECK_CA_ROOT
@@ -138,8 +139,9 @@ const char sketch_id[] = "awning_control 20210628";
     #endif
 #endif
     
-const int SEND_PIN = 16; // GPIO16 - D0 on nodeMCU
-const int REPEATS = 3; // no. of RF remote control command repetitions
+const int SEND_PIN        = 16; // GPIO16 - D0 on nodeMCU
+const int REPEATS         = 3;  // no. of RF remote control command repetitions
+const int CONN_RETRIES    = 10; // no. of retries for failing WiFi/MQTT connection 
 const unsigned int t_busy = 40000; // time required to move awning completely in/out
 
 // RF remote control pulse sequences
@@ -178,18 +180,27 @@ bool new_cmd = false;
 
 void mqtt_connect()
 {
-    Serial.print("Checking wifi...");
+    Serial.print("Checking WiFi...");
+   int count = 0;
     while (WiFi.status() != WL_CONNECTED)
     {
         Serial.print(".");
         delay(1000);
+        if (++count == CONN_RETRIES) {
+            Serial.println("WiFi connection failed.");
+            ESP.restart();
+        }
     }
 
-    Serial.print("\nMQTT connecting ");
+    count = 0;
     while (!client.connect(HOSTNAME, MQTT_USER, MQTT_PASS))
     {
         Serial.print(".");
         delay(1000);
+        if (++count == CONN_RETRIES) {
+            Serial.println("MQTT connection failed.");
+            ESP.restart();
+        }   
     }
 
     Serial.println("connected!");
@@ -252,22 +263,33 @@ void setup()
     WiFi.hostname(HOSTNAME);
     WiFi.mode(WIFI_STA);
     WiFi.begin(ssid, pass);
+    int count = 0;
     while (WiFi.status() != WL_CONNECTED)
     {
         Serial.print(".");
         delay(1000);
+	if (++count == CONN_RETRIES) {
+            Serial.println("WiFi connection failed.");
+	    ESP.restart();
+	}
     }
     Serial.println("connected!");
 
     Serial.print("Setting time using SNTP ");
     configTime(-5 * 3600, 0, "pool.ntp.org", "time.nist.gov");
     now = time(nullptr);
+    int count = 0;
     while (now < 1510592825)
     {
         delay(500);
         Serial.print(".");
         now = time(nullptr);
+	if (++count == CONN_RETRIES) {
+            Serial.println("Failed to set time.");
+            ESP.restart();
+        }
     }
+
     Serial.println("done!");
     struct tm timeinfo;
     gmtime_r(&now, &timeinfo);
@@ -299,12 +321,17 @@ void loop()
 {
     if (WiFi.status() != WL_CONNECTED)
     {
-        Serial.print("Checking wifi" );
+        Serial.print("Checking WiFi" );
+	int count = 0;
         while (WiFi.waitForConnectResult() != WL_CONNECTED)
         {
             WiFi.begin(ssid, pass);
             Serial.print(".");
             delay(10);
+	    if (++count == CONN_RETRIES) {
+		Serial.println("WiFi connection failed.");
+		ESP.restart();
+	    }
         }
         Serial.println("connected");
     }
