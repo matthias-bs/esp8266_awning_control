@@ -125,7 +125,18 @@ The circuit is powered from the ESP8266 DevKit Micro-USB socket (~70mA @5V).
     <td>
 </tr>
 </table>
+
+### Software Variants
+
+* [esp8266_awning_control.ino](https://github.com/matthias-bs/esp8266_awning_control/blob/main/esp8266_awning_control.ino) - WiFi credentials hard coded
+* [esp8266_awning_control_wm.ino](https://github.com/matthias-bs/esp8266_awning_control/blob/main/esp8266_awning_control_wm/esp8266_awning_control_wm.ino) - WiFi configuration with [WiFiManager](https://github.com/tzapu/WiFiManager)
    
+   **Usage:**
+   1. For initial configuration or if connecting with saved credetials failed: Connect a web client to ESP WiFi Access Point defined in `HOSTNAME`
+   2. The WiFi Access Point's password is defined in `AP_PASS`
+   3. Open http://192.168.4.1 in your web browser and enter your WiFi Access Point credentials.
+   
+   The information above is also printed to the serial console. The configuration page will time out after 180s and trigger a restart.
    
 ### Software Configuration
    
