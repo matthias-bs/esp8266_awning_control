@@ -17,6 +17,6 @@
   "homepage": "https://github.com/matthias-bs/esp8266_awning_control#README",
   "dependencies": {
     "RFControl": "pimatic/RFControl",
-    "arduino-mqtt": "256dpi/arduino-mqtt#semver:^2.5.0"
+    "arduino-mqtt": "256dpi/arduino-mqtt#semver:^2.5.3"
   }
 }
