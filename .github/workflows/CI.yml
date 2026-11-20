@@ -67,8 +67,8 @@ jobs:
         run:
           |
           ps -p "$$"
-          arduino-cli lib install MQTT@2.5.3
-          arduino-cli lib install WiFiManager@2.0.15-rc.1
+          arduino-cli lib install MQTT@2.6.0
+          arduino-cli lib install WiFiManager
           gh repo clone pimatic/RFControl
           cp -r RFControl /home/runner/Arduino/libraries/
           pwd
